@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Trimmy</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.5.0/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <meta name="google-signin-client_id" content="348224907382-s9dut7ij1st6oo2ac4o9a58trq2b9epg.apps.googleusercontent.com"/>
+    </head>
+    <body>
+        <div th:if="${error}">
+            <div class="alert alert-danger">
+                <span th:text="${error}"/>
+            </div>
+        </div>
+        <div th:if="${logout}">
+            <div class="alert alert-info"> 
+                <span th:text="${logout}"/> 
+            </div>
+        </div>
+        <div th:if="${success}">
+            <div class="alert alert-success">
+                <span th:text="${success}"/>
+            </div>
+        </div>
+        <div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Login</h3>
+                    <form th:action="@{/app/login}" method="post">
+                        <div class="form-group"> <label for="username">Username</label>: <input type="text" id="1_username" name="username" class="form-control" autofocus="autofocus" placeholder="Username"/> </div>
+                        <div class="form-group"> <label for="password">Password</label>: <input type="password" id="1_password" name="password" class="form-control" placeholder="Password"/> </div>
+                        <div class="form-group">
+                            <div class="row pt-3">
+                                <div class="col-sm-6">
+                                    <input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-info" value="Log In"/>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="g-signin2" data-longtitle="true" data-onsuccess="onSignIn" ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3>Register</h3>
+                    <form th:action="@{/app/register}" method="post">
+                        <div class="form-group"> <label for="username">Username</label>: <input type="text" id="r_username" name="username" class="form-control" autofocus="autofocus" placeholder="Username"/> </div>
+                        <div class="form-group"> <label for="password">Password</label>: <input type="password" id="r_password" name="password" class="form-control" placeholder="Password"/> </div>
+                        <div class="form-group"> <label for="cpassword">Confirm Password</label>: <input type="password" id="r_cpassword" name="cpassword" class="form-control" placeholder="Password"/> </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="offset-md-3 col-sm-6">
+                                    <input type="submit" name="register-submit" id="register-submit" class="form-control btn btn-info" value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/jquery.min.js/}"></script>
+        <script type="text/javascript" th:src="@{/webjars/bootstrap/4.5.0/js/bootstrap.min.js}"></script>
+        <script>
+            var flag = [[${logout_flag}]];
+//            function onSignInFailure() {
+//                flag = false;
+//            }
+
+            function onSignIn(googleUser) {
+                if (!flag) {
+                    var profile = googleUser.getBasicProfile();
+                    $.ajax({
+                        type: "post",
+                        data: profile,
+                        url: "/app/oauthlogin",
+                        dataType: "text",
+                        success: function (result) {
+                            window.location = result;
+                        }
+                    });
+                } else {
+                    signOut();
+                    flag = false;
+//                    window.location = "/app/login";
+                }
+            }
+
+//            window.onload = function () {
+//                flag = false;
+//            }
+
+            function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                    console.log('User signed out.');
+                });
+            }
+
+            var password = document.getElementById("r_password")
+                    , confirm_password = document.getElementById("r_cpassword");
+
+            function validatePassword() {
+                if (password.value != confirm_password.value) {
+                    confirm_password.setCustomValidity("Passwords Don't Match");
+                } else {
+                    confirm_password.setCustomValidity('');
+                }
+            }
+
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+        </script>
+    </body>
+</html>

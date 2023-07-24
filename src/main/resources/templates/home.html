@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Trimmy</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.5.0/css/bootstrap.min.css}"/>
+        <!--<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}"/>-->
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <meta name="google-signin-client_id" content="348224907382-s9dut7ij1st6oo2ac4o9a58trq2b9epg.apps.googleusercontent.com"/>
+    </head>
+    <body>
+        <div th:if="${error}">
+            <div class="alert alert-danger">
+                <span th:text="${error}"/>
+            </div>
+        </div>
+        <div th:if="${logout}">
+            <div class="alert alert-info"> You have been logged out. </div>
+        </div>
+        <div th:if="${success}">
+            <div class="alert alert-success">
+                <span th:text="${success}"/>
+            </div>
+        </div>
+        <div class = "row p-4">
+            <div class = "col-md-6">
+                <form th:action="@{/app/home/url}" method="post">
+                    <div class="form-group"> <label for="url">URL</label>: <input type="text" id="url" name="url" class="form-control" autofocus="autofocus" placeholder="http://"/> </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="offset-md-3 col-sm-6">
+                                <input type="submit" name="url-submit" id="url-submit" class="form-control btn btn-info" value="ADD URL"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class = "col-md-6">
+                <div class="row">
+                    <div class="col">
+                        <h6 class="float-right">UserName:&nbsp;<span th:text="${user}"/></h6> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6 class="float-right">APIKey:&nbsp;<a class="float-right" th:href="@{/swagger}" th:text="${apiKey}" target="_blank" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a class="btn btn-secondary float-right" th:href ="@{/app/logout}">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "row p-4">
+            <div class = "col-md-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>URL</th>
+                            <th>Short URL</th>
+                            <th>Created At</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:if="${urlList.empty}">
+                            <td colspan="2"> No URL Available </td>
+                        </tr>
+                        <tr th:each="url : ${urlList}">
+                            <td> <span th:text="${url.id}" /> </td>
+                            <td> <span th:text="${url.url}" />  </td>
+                            <td> <a th:href="@{/r/}+${url.shortenurl}" th:text="${url.shortenurl}" target="_blank" /> </td>
+                            <td> <span th:text="${url.createdAt}" />  </td>
+                            <td >
+                                <form th:action="@{/app/home/url/delete/}+${url.id}" th:method="delete">
+                                    <input type="hidden" name="_method" value="delete" />
+                                    <input type="submit" value="Delete" class="btn btn-danger" />
+                                </form>
+                            </td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/jquery.min.js/}"></script>
+        <script type="text/javascript" th:src="@{/webjars/bootstrap/4.5.0/js/bootstrap.min.js}"></script>
+    </body>
+</html>
