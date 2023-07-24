@@ -62,23 +62,6 @@ public class LoginService implements UserDetailsService {
         return lReturn;
     }
 
-    public boolean authenticateOAuthUser(String username, String id) {
-        System.out.println(username);
-        boolean lReturn = false;
-        Optional<Users> findByUsername = userRepository.findByUsername(username.toLowerCase());
-        if (findByUsername.isPresent()) {
-            Users lUser = findByUsername.get();
-            SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(lUser, "", lUser.getAuthorities()));
-            lReturn = true;
-        } else {
-            boolean registerNewUser = registerNewUser(username, "", id);
-            if (registerNewUser) {
-                lReturn = true;
-            }
-        }
-        return lReturn;
-    }
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<Users> findByUsername = userRepository.findByUsername(username.toLowerCase());

@@ -5,7 +5,7 @@ spring:
 #short_url:
 #  domain: localhost:8081/
 counter_file:
-  location: file:${HOME}/.trimmy/counter.txt
+  location: file:${HOME}/./counter.txt
 redisson:
   address: redis://127.0.0.1:6379
   password:

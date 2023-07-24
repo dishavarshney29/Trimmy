@@ -46,16 +46,6 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("/oauthlogin")
-    @ResponseBody
-    public String login(@RequestBody MultiValueMap<String, String> formData) {
-        if (loginService.authenticateOAuthUser(formData.get("Eu").get(0), formData.get("bV").get(0))) {
-            return "/app/home";
-        } else {
-            return "/app/login?error=loginError";
-        }
-    }
-
     @PostMapping("/register")
     public String register(@ModelAttribute Users user, Model model) {
         boolean created = false;
