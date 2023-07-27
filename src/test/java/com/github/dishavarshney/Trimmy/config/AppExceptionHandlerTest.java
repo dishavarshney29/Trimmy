@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class APIKeyAuthFilterTest {
+class AppExceptionHandlerTest {
 
     @Test
-    void getPreAuthenticatedPrincipal() {
+    void handleException() {
     }
 
     @Test
-    void getPreAuthenticatedCredentials() {
+    void testHandleException() {
     }
 }

@@ -35,9 +35,6 @@ public class URLManagerServiceImpl implements URLManagerService {
 	private URLRepository urlRepository;
 
 	@Autowired
-	private UserRepository userRepository;
-
-	@Autowired
 	private CounterService counterService;
 
 	@Value("${short_url.domain}")

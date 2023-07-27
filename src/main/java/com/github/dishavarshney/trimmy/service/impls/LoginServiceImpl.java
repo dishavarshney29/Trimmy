@@ -28,6 +28,12 @@ public class LoginServiceImpl implements UserDetailsService {
     @Autowired
     PasswordEncoder passwordEncoder;
 
+    @Autowired
+    public LoginServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
+
     public boolean registerNewUser(String username, String password, String Id) {
         boolean lReturn = false;
         Optional<Users> findByUsername = userRepository.findByUsername(username.toLowerCase());

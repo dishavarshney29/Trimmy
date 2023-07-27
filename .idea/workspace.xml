@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65fee658-a354-4000-ab63-22ed1f62a7c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/counter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/counter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/APIKeyAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/APIKeyAuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/AppExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/AppExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/RedissonConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/RedissonConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/RestExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/filters/ApiUsageLimitFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/filters/ApiUsageLimitFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/URLDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/URLDocument.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/CounterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/CounterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/dishavarshney/Trimmy/TrimmyApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/dishavarshney/Trimmy/config/APIKeyAuthFilterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/dishavarshney/Trimmy/config/AppConfigTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +57,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
+    "last_directory_selection": "C:/Users/HP NOTEBOOK/DishaVarshney/Projects/Trimmy/src/main/java/com/github/dishavarshney/trimmy/service/impls",
     "last_opened_file_path": "C:/Users/HP NOTEBOOK/DishaVarshney/Projects/Trimmy",
     "onboarding.tips.debug.path": "C:/Users/HP NOTEBOOK/DishaVarshney/Projects/TrimmyPlease/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
@@ -67,7 +77,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.github.dishavarshney.trimmy.config" />
+      <recent name="com.github.dishavarshney.trimmy.service.impls" />
+      <recent name="com.github.dishavarshney.trimmy.validators" />
+      <recent name="com.github.dishavarshney.trimmy.utils" />
+      <recent name="com.github.dishavarshney.trimmy.scheduler" />
+      <recent name="com.github.dishavarshney.trimmy.repositories.impls" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.github.dishavarshney.trimmy.repositories" />
@@ -75,8 +89,8 @@
       <recent name="com.github.dishavarshney.trimmy.service.interfaces" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Trimmy-Local" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.Trimmy-Local">
+    <configuration name="Trimmy-Local" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.github.dishavarshney.trimmy.TrimmyApplication" />
       <module name="Trimmy" />
       <extension name="coverage">
@@ -89,9 +103,89 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CounterServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trimmy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.dishavarshney.Trimmy.service.impls.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.dishavarshney.Trimmy.service.impls" />
+      <option name="MAIN_CLASS_NAME" value="com.github.dishavarshney.Trimmy.service.impls.CounterServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpireDocumentSchedulerTest.testExpireDocuments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trimmy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.dishavarshney.Trimmy.scheduler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.dishavarshney.Trimmy.scheduler" />
+      <option name="MAIN_CLASS_NAME" value="com.github.dishavarshney.Trimmy.scheduler.ExpireDocumentSchedulerTest" />
+      <option name="METHOD_NAME" value="testExpireDocuments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trimmy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.dishavarshney.Trimmy.service.impls.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.dishavarshney.Trimmy.service.impls" />
+      <option name="MAIN_CLASS_NAME" value="com.github.dishavarshney.Trimmy.service.impls.LoginServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="URLManagerServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trimmy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.dishavarshney.Trimmy.service.impls.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.dishavarshney.Trimmy.service.impls" />
+      <option name="MAIN_CLASS_NAME" value="com.github.dishavarshney.Trimmy.service.impls.URLManagerServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trimmy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.dishavarshney.Trimmy.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.dishavarshney.Trimmy.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.github.dishavarshney.Trimmy.utils.UtilsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Trimmy-Local" />
+        <item itemvalue="JUnit.URLManagerServiceImplTest" />
+        <item itemvalue="JUnit.LoginServiceImplTest" />
+        <item itemvalue="JUnit.CounterServiceImplTest" />
+        <item itemvalue="JUnit.UtilsTest" />
+        <item itemvalue="JUnit.ExpireDocumentSchedulerTest.testExpireDocuments" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +214,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/URLDocument.java</url>
-          <line>80</line>
+          <line>81</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -135,7 +229,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/LoginServiceImpl.java</url>
-          <line>32</line>
+          <line>38</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -147,26 +241,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/LoginController.java</url>
           <line>30</line>
           <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/AppSecurityConfig.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/HomeController.java</url>
@@ -193,5 +267,37 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Trimmy$FilterConfigurationTest.ic" NAME="FilterConfigurationTest Coverage Results" MODIFIED="1690490545423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.config.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Trimmy$ExpireDocumentSchedulerTest.ic" NAME="ExpireDocumentSchedulerTest Coverage Results" MODIFIED="1690493776227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.scheduler.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Trimmy$CounterServiceImplTest.ic" NAME="CounterServiceImplTest Coverage Results" MODIFIED="1690497518485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.service.impls.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Trimmy$URLManagerServiceImplTest.ic" NAME="URLManagerServiceImplTest Coverage Results" MODIFIED="1690498771482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.service.impls.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Trimmy$ApiUsageLimitFilterTest.ic" NAME="ApiUsageLimitFilterTest Coverage Results" MODIFIED="1690492666126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.filters.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Trimmy$LoginServiceImplTest.ic" NAME="LoginServiceImplTest Coverage Results" MODIFIED="1690497784428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.service.impls.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Trimmy$UtilsTest.ic" NAME="UtilsTest Coverage Results" MODIFIED="1690494502963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.utils.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Trimmy$RedissonConfigurationTest.ic" NAME="RedissonConfigurationTest Coverage Results" MODIFIED="1690491754991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.config.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Trimmy$MongoDBConfigTest.ic" NAME="MongoDBConfigTest Coverage Results" MODIFIED="1690491165424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.config.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Trimmy$CustomUrlRepositoryImplTest.ic" NAME="CustomUrlRepositoryImplTest Coverage Results" MODIFIED="1690493605940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.dishavarshney.Trimmy.repositories.impls.*</FILTER>
+    </SUITE>
   </component>
 </project>

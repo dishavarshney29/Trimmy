@@ -7,10 +7,6 @@ package com.github.dishavarshney.trimmy.config;
 
 import com.github.dishavarshney.trimmy.models.Users;
 import com.github.dishavarshney.trimmy.repositories.UserRepository;
-
-import java.util.Optional;
-import java.util.UUID;
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,6 +16,10 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter;
 import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Optional;
+import java.util.UUID;
 
 /**
  * @author Disha Varshney
@@ -48,7 +48,6 @@ public class APIKeyAuthFilter extends AbstractPreAuthenticatedProcessingFilter {
     }
 
     @Override
-
     protected Object getPreAuthenticatedPrincipal(HttpServletRequest request) {
         String header = request.getHeader(principalRequestHeader);
         try {

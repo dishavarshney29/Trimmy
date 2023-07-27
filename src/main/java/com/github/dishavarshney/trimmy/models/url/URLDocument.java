@@ -42,6 +42,7 @@ public class URLDocument extends AbstractDocument implements PrePersistListener,
 
 	private Date updatedAt;
 
+	@Setter
 	private String createdBy;
 
 	private String updatedBy;

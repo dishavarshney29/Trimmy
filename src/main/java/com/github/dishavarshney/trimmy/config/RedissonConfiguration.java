@@ -32,7 +32,7 @@ public class RedissonConfiguration {
 	
 	@Bean(destroyMethod = "shutdown")
 	public RedissonClient redissonClient() {
-		LOG.info("Creaing RedissonClient from RedissonConfiguration class");
+		LOG.info("Creating RedissonClient from RedissonConfiguration class");
 		Config config = new Config();
 		LOG.info("Redis Address: {}", redisAddress);
 		SingleServerConfig conf = config.useSingleServer().setAddress(redisAddress);
