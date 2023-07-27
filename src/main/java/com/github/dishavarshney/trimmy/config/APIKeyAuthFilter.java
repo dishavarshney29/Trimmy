@@ -22,7 +22,6 @@ import org.springframework.security.web.authentication.preauth.AbstractPreAuthen
 import org.springframework.stereotype.Component;
 
 /**
- *
  * @author Disha Varshney
  */
 @Component

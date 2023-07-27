@@ -36,7 +36,7 @@ public class CounterServiceImpl implements CounterService {
 	
 	
 	@PostConstruct
-	public synchronized void init() throws IOException, URISyntaxException {
+	public synchronized void init() throws IOException {
 		LOGGER.info("Reading counter value from: {}", counterFilePath);
 		String counterValue = new String(Files.readAllBytes(Paths.get(counterFilePath)));
 		LOGGER.info("Picked Counter Value: {}", counterValue);
@@ -44,11 +44,10 @@ public class CounterServiceImpl implements CounterService {
 	}
 	
 	@PreDestroy
-	public synchronized void cleanup() throws URISyntaxException {
+	public synchronized void cleanup() {
 		LOGGER.info("Cleaning up Counter Service");
 		LOGGER.info("Writing counter value {} to file at {}", counter.toString(), counterFilePath);
-		Path path = Paths.get(new URI(counterFilePath));
-		try(BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
+		try(BufferedWriter writer = Files.newBufferedWriter(Paths.get(counterFilePath), StandardCharsets.UTF_8)) {
 			writer.write(counter.toString());
 		} catch (IOException e) {
 			LOGGER.error("Error while writing counter value to file", e);

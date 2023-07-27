@@ -43,7 +43,7 @@ public class ApiUsageLimitFilter implements Filter {
 		}
 
 		try {
-			LOG.info("Checking usgae limit for IP: {}", httpServletRequest.getHeader("X-Real-IP"));
+			LOG.info("Checking usage limit for IP: {}", httpServletRequest.getHeader("X-Real-IP"));
 			Boolean allowed = apiUsageMonitorService.isAllowed(httpServletRequest);
 			if (allowed.equals(Boolean.TRUE)) {
 				LOG.info("IP: {} allowed", httpServletRequest.getHeader("X-Real-IP"));
