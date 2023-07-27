@@ -25,7 +25,11 @@
         <div class = "row p-4">
             <div class = "col-md-6">
                 <form th:action="@{/app/home/url}" method="post">
-                    <div class="form-group"> <label for="url">URL</label>: <input type="text" id="url" name="url" class="form-control" autofocus="autofocus" placeholder="http://"/> </div>
+                    <div class="form-group"> <label for="url">URL</label>: <input type="text" id="url" name="originalUrl" class="form-control" autofocus="autofocus" placeholder="http://"/> </div>
+                    <div class="form-group">
+                        <label for="customShortUrl">Custom Short URL (optional)</label>:
+                        <input type="text" id="customShortUrl" name="customShortUrl" class="form-control" placeholder="Enter custom short URL"/>
+                    </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="offset-md-3 col-sm-6">
@@ -75,7 +79,7 @@
                             <td> <a th:href="@{/r/}+${url.shortUrlKey}" th:text="${url.shortUrlKey}" target="_blank" /> </td>
                             <td> <span th:text="${url.createdAt}" />  </td>
                             <td >
-                                <form th:action="@{/app/home/url/delete/}+${url.id}" th:method="delete">
+                                <form th:action="@{/app/home/url/delete/}+${url.shortUrlKey}" th:method="delete">
                                     <input type="hidden" name="_method" value="delete" />
                                     <input type="submit" value="Delete" class="btn btn-danger" />
                                 </form>

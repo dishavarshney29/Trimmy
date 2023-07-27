@@ -24,13 +24,10 @@ import java.util.concurrent.CompletableFuture;
 /**
  * @author Disha Varshney
  */
-//@Controller
 @RestController("/")
-//@RequestMapping("/")
 public class DefaultController {
 
     @Autowired
-//    URLService uRLService;
     private URLManagerService urlManagerService;
 
     private static final Logger LOG = LogManager.getLogger(DefaultController.class);
@@ -44,30 +41,6 @@ public class DefaultController {
     public String home() {
         return "redirect:/swagger-ui.html";
     }
-
-//    @GetMapping
-//    public ResponseEntity<String> home() {
-//        return new ResponseEntity<String>("Hey There!! Nothing for you here I guess", HttpStatus.OK);
-//    }
-
-//    @GetMapping("/notfound")
-//    Decide if this is better or keeping default as home is better
-//    public ResponseEntity<String> noResourceFound() {
-//        LOG.error("Resource not found");
-//        return new ResponseEntity<String>("The resource you're looking for could not be located", HttpStatus.NOT_FOUND);
-//    }
-
-//    @GetMapping("r/{shortUrl}")
-//    public String redirect(@PathVariable String shortUrl) {
-//        String lReturn = "redirect:/app/home";
-//        if (!ObjectUtils.isEmpty(shortUrl)) {
-//            Optional<URLEntity> urlEntity = uRLService.getURLEntity(shortUrl);
-//            if (urlEntity.isPresent()) {
-//                lReturn = "redirect:" + urlEntity.get().getUrl();
-//            }
-//        }
-//        return lReturn;
-//    }
 
     @Async
     @GetMapping("r/{shortUrlKey}")

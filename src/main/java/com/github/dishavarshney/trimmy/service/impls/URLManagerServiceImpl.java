@@ -49,12 +49,14 @@ public class URLManagerServiceImpl implements URLManagerService {
 	@Override
 	public Optional<ShortUrlInfo> createShortUrlKey(String longUrl, String customShortUrl, UrlExpiryUnit expiryUnit, Integer expiryValue) throws DuplicateKeyException, NoSuchElementException, InvalidCustomShortUrl {
 		String shortUrlKey = null;
+		URLDocument urlEntity = new URLDocument(longUrl, getValidTill(expiryUnit, expiryValue));
 		if(!StringUtils.isEmpty(customShortUrl)) {
 			Optional<URLDocument> existingUrl = urlRepository.findOneByShortUrlKeyAndStatus(customShortUrl, UrlStatus.ACTIVE);
 			if(existingUrl.isPresent()) {
-				throw new InvalidCustomShortUrl("Custom url is already taken. Please provide a unique custom url");
+				throw new InvalidCustomShortUrl("Custom url is already taken.");
 			} else {
 				shortUrlKey = customShortUrl;
+				urlEntity.setCustomShortUrl(customShortUrl);
 			}
 		} else {
 			Long counter = counterService.getNextCounterNumber();
@@ -66,7 +68,6 @@ public class URLManagerServiceImpl implements URLManagerService {
 			}
 			LOG.info("Generated Short URL Key: {}", shortUrlKey);
 		}
-		URLDocument urlEntity = new URLDocument(longUrl, getValidTill(expiryUnit, expiryValue));
 		urlEntity.setOriginalUrl(longUrl);
 		urlEntity.setShortUrlKey(shortUrlKey);
 		urlEntity.setStatus(UrlStatus.ACTIVE);
@@ -75,7 +76,7 @@ public class URLManagerServiceImpl implements URLManagerService {
 		ShortUrlInfo shortUrlInfo = new ShortUrlInfo();
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy'T'hh:mm:ssXXX");
 		shortUrlInfo.setKey(urlEntity.getShortUrlKey());
-		shortUrlInfo.setCompleteUrl(shortUrlDomain + urlEntity.getShortUrlKey());
+		shortUrlInfo.setCompleteUrl(shortUrlDomain + "/r/" + urlEntity.getShortUrlKey());
 		shortUrlInfo.setExpiry(simpleDateFormat.format(urlEntity.getValidTill()));
 		return Optional.of(shortUrlInfo);
 	}

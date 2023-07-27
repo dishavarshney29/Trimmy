@@ -81,7 +81,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
                     .csrf().disable()
                     .authorizeRequests()
                     .antMatchers("/**/favicon.ico", "/**/*.css", "/**/*.js", "/**/*.png", "/**/*.xlsx", "/fonts/**").permitAll()
-                    .antMatchers("/swagger-ui.html", "/swagger-resources/**", "/v2/api-docs").permitAll()
+                    .antMatchers("/swagger-ui.html", "/swagger-resources/**", "/v2/api-docs", "/webjars/**").permitAll()
                     .antMatchers("/app/oauthlogin", "/app/login", "/app/logout", "/app/register", "/*").permitAll()
                     .antMatchers("/app/home").authenticated()
                     .antMatchers("/app/home/**").authenticated()

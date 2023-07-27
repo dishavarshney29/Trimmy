@@ -37,23 +37,4 @@ public class AppConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
-
-//    @Bean
-//    public ViewResolver internalResourceViewResolver() {
-//        InternalResourceViewResolver bean = new InternalResourceViewResolver();
-//        bean.setViewClass(JstlView.class);
-//        bean.setPrefix("WEB-INF/views/");
-//        bean.setSuffix(".jsp");
-//        return bean;
-//    }
-//
-////    @Override
-////    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-////        configurer.enable();
-////    }
-//
-//    @Override
-//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-//    }
 }

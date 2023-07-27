@@ -17,5 +17,4 @@ public class ShortUrlInfo {
 	
 	@JsonProperty("expiry")
 	private String expiry;
-
 }

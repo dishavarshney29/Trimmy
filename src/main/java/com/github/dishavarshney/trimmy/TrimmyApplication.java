@@ -20,9 +20,5 @@ public class TrimmyApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(TrimmyApplication.class, args);
-
-//        URLService urlService = context.getBean(URLService.class);
-//        urlService.scheduleDeleteExpiredURLsTask();
     }
-
 }

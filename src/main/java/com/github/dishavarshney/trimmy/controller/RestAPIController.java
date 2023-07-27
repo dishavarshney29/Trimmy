@@ -50,32 +50,11 @@ public class RestAPIController {
 
     private static final String ALLOWED_ORIGINS = "*";
 
-//    @Autowired
-//    URLService lService;
-
-//    @GetMapping("/encode")
-//    public ResponseEntity encode(@RequestParam String url, HttpServletRequest request) {
-//        URLEntity lEntity = new URLEntity();
-//        lEntity.setUrl(url);
-//        try {
-//            boolean addURLEntity = lService.addURLEntity(lEntity);
-//            if (addURLEntity) {
-//                return ResponseEntity.ok(lEntity.getReturn(request));
-//            } else {
-//                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-//                        .body("Already URL Found / Empty URL");
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-//                    .body("Should be a valid HTTP or HTTPS URL");
-//        }
-//    }
-    @Async("asyncExecutor")
+//    @Async("asyncExecutor")
     @PostMapping("/encode")
     @CrossOrigin(origins = ALLOWED_ORIGINS, allowedHeaders = "*")
     public CompletableFuture<ResponseEntity<?>> createShortUrl(
-            @RequestBody @Validated ApiRequest apiRequest) throws InvalidCustomShortUrl {
+            @RequestBody @Validated ApiRequest apiRequest, HttpServletRequest request) throws InvalidCustomShortUrl {
 
         LOG.info("Incoming Request for creating short URL: {}", apiRequest);
         ApiResponse<ShortUrlInfo> response = new ApiResponse<>();
@@ -162,7 +141,7 @@ public class RestAPIController {
     }
 
     @GetMapping("/list")
-    // Handle exceptions like teeny
+    // Handle exceptions later
     public ResponseEntity listAll(HttpServletRequest request) {
         List<HashMap> lReturn = new ArrayList<>();
         List<URLDocument> URLEntityList = urlManagerService.listURLEntity();

@@ -5,60 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65fee658-a354-4000-ab63-22ed1f62a7c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/AsyncConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/FilterConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/RedissonConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/constants/ApiRequestErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/constants/ApiRequestStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/constants/UrlExpiryUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/constants/UrlStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/URLManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/URLRedirectionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/errorhandlers/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/exceptions/InvalidCustomShortUrl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/exceptions/InvalidUrlExpiryUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/exceptions/InvalidUrlExpiryValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/filters/ApiUsageLimitFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/filters/RequestResponseLoggingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/AbstractDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/api/ApiRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/api/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/ShortUrlInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/URLDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/UrlExpiry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/scheduler/ExpireDocumentScheduler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/ApiUsageMonitorServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/CounterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/interfaces/ApiUsageMonitorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/interfaces/CounterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/interfaces/URLManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/validators/ApiRequestValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/TrimmyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/TrimmyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/APIKeyAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/APIKeyAuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/AppSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/AppSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/MongoDBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/MongoDBConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/DefaultController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/RestAPIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/RestAPIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/service/URLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/entity/PrePersistListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/PrePersistListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/entity/PreUpdateListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/PreUpdateListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/entity/URLEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/URLEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/repositories/URLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/repositories/URLRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/utils/MyEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/utils/MyEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/URLManagementController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/URLRedirectionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/URLEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/api/ApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/api/ApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/ShortUrlInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/ShortUrlInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/utils/MyEncoder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,79 +110,69 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/HomeController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>jar://$PROJECT_DIR$/../../../../../Program Files/Java/jdk-1.8/jre/lib/rt.jar!/sun/applet/Main.class</url>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/RestAPIController.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/RestAPIController.java</url>
-          <line>120</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/URLDocument.java</url>
           <line>80</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/url/URLDocument.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/utils/Utils.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/utils/Utils.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/utils/Utils.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/Users.java</url>
           <line>97</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/models/Users.java</url>
           <line>91</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/RestAPIController.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="43" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/LoginServiceImpl.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/LoginController.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/LoginController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/AppSecurityConfig.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="44" />
+          <line>70</line>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="45" />
+          <line>71</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/HomeController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/HomeController.java</url>
@@ -230,24 +183,11 @@
           </properties>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/controller/RestAPIController.java</url>
-          <line>76</line>
-          <properties class="com.github.dishavarshney.trimmy.controller.RestAPIController" method="createShortUrl">
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <breakpoint enabled="true" type="java-exception">
+        <breakpoint type="java-exception">
           <properties class="org.springframework.expression.spel.SpelEvaluationException" package="org.springframework.expression.spel" />
           <option name="timeStamp" value="10" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="SecurityContextHolder.getContext().getAuthentication().getPrincipal()" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

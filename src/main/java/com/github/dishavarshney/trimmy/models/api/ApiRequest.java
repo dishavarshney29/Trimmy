@@ -25,7 +25,6 @@ public class ApiRequest {
 	private String longUrl;
 
 	@JsonProperty("customShortUrl")
-	@NotNull
 	@Length(max = 7)
 	private String customShortUrl;
 	
