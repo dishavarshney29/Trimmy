@@ -1,8 +1,8 @@
-package in.turls.lib.constants;
-
-import java.util.HashMap;
+package com.github.dishavarshney.trimmy.constants;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+
+import java.util.HashMap;
 
 public enum UrlExpiryUnit {
 

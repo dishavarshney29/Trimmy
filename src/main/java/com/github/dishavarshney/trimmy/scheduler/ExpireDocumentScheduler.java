@@ -1,16 +1,15 @@
-package in.turls.lib.scheduler;
+package com.github.dishavarshney.trimmy.scheduler;
 
-import java.util.Calendar;
-import java.util.Date;
-
+import com.github.dishavarshney.trimmy.constants.UrlStatus;
+import com.github.dishavarshney.trimmy.repositories.URLRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import in.turls.lib.constants.UrlStatus;
-import in.turls.lib.repositories.URLRepository;
+import java.util.Calendar;
+import java.util.Date;
 
 @Component
 public class ExpireDocumentScheduler {

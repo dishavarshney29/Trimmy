@@ -1,13 +1,12 @@
-package in.turls.lib.configurations;
+package com.github.dishavarshney.trimmy.config;
 
-import javax.servlet.Filter;
-
+import com.github.dishavarshney.trimmy.filters.ApiUsageLimitFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import in.turls.lib.filters.ApiUsageLimitFilter;
+import javax.servlet.Filter;
 
 @Configuration
 public class FilterConfiguration {

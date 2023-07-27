@@ -5,22 +5,21 @@
  */
 package com.github.dishavarshney.trimmy.controller;
 
-import com.github.dishavarshney.trimmy.controller.service.URLService;
-import com.github.dishavarshney.trimmy.entity.URLEntity;
-import com.github.dishavarshney.trimmy.entity.Users;
+import com.github.dishavarshney.trimmy.constants.UrlExpiryUnit;
+import com.github.dishavarshney.trimmy.models.Users;
+import com.github.dishavarshney.trimmy.models.url.ShortUrlInfo;
+import com.github.dishavarshney.trimmy.models.url.URLDocument;
+import com.github.dishavarshney.trimmy.service.interfaces.URLManagerService;
 import com.github.dishavarshney.trimmy.utils.Utils;
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Optional;
 
 /**
- *
  * @author Disha Varshney
  */
 @Controller
@@ -28,7 +27,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 
     @Autowired
-    URLService uRLService;
+//    URLService uRLService;
+    URLManagerService urlManagerService;
 
     @GetMapping({"", "/", "/url", "/url/{id}"})
     public String homePage(Model model) {
@@ -37,11 +37,11 @@ public class HomeController {
     }
 
     @PostMapping("/url")
-    public String saveURL(@ModelAttribute URLEntity lEntity, Model model, HttpServletRequest request) {
+    public String saveURL(@ModelAttribute URLDocument urlDocument, Model model, HttpServletRequest request) {
         try {
-            boolean addURLEntity = uRLService.addURLEntity(lEntity);
-            if (addURLEntity) {
-                model.addAttribute("success", "URL Added : " + Utils.getShortUrl(request, lEntity.getShortenurl()));
+            Optional<ShortUrlInfo> shortUrlInfo = urlManagerService.createShortUrlKey(urlDocument.getOriginalUrl(), urlDocument.getCustomShortUrl(), UrlExpiryUnit.YEARS, 1);
+            if (shortUrlInfo.isPresent()) {
+                model.addAttribute("success", "URL Added : " + Utils.getShortUrl(request, urlDocument.getShortUrlKey()));
             } else {
                 model.addAttribute("error", "Already URL Found / Empty URL");
             }
@@ -54,7 +54,7 @@ public class HomeController {
 
     @PostMapping("/url/delete/{id}")
     public String deleteURL(@PathVariable String id) {
-        uRLService.deleteURLEntity(id);
+        urlManagerService.deleteUrlEntity(id);
         return "redirect:/app/home/url/" + id;
     }
 
@@ -62,6 +62,6 @@ public class HomeController {
         Users lUser = Utils.getUserPrincipalObject();
         model.addAttribute("user", lUser.getUsername());
         model.addAttribute("apiKey", lUser.getToken());
-        model.addAttribute("urlList", uRLService.ListURLEntity());
+        model.addAttribute("urlList", urlManagerService.listURLEntity());
     }
 }

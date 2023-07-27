@@ -1,4 +1,4 @@
-package in.turls.lib.services.interfaces;
+package com.github.dishavarshney.trimmy.service.interfaces;
 
 import javax.servlet.http.HttpServletRequest;
 

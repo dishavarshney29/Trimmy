@@ -1,12 +1,12 @@
-package in.turls.lib.validators;
+package com.github.dishavarshney.trimmy.validators;
+
+import com.github.dishavarshney.trimmy.constants.UrlExpiryUnit;
+import com.github.dishavarshney.trimmy.exceptions.InvalidUrlExpiryUnit;
+import com.github.dishavarshney.trimmy.exceptions.InvalidUrlExpiryValue;
+import com.github.dishavarshney.trimmy.models.api.ApiRequest;
+import com.github.dishavarshney.trimmy.models.url.UrlExpiry;
 
 import java.util.Optional;
-
-import in.turls.lib.constants.UrlExpiryUnit;
-import in.turls.lib.exceptions.InvalidUrlExpiryUnit;
-import in.turls.lib.exceptions.InvalidUrlExpiryValue;
-import in.turls.lib.models.api.ApiRequest;
-import in.turls.lib.models.url.UrlExpiry;
 
 public class ApiRequestValidator {
 	
@@ -23,11 +23,11 @@ public class ApiRequestValidator {
 		Optional<UrlExpiryUnit> unitOptional = Optional.ofNullable(urlExpiry.getUnit());
 		Optional<Integer> valueOptional = Optional.ofNullable(urlExpiry.getValue());
 		
-		if (unitOptional.isEmpty()) {
+		if (!unitOptional.isPresent()) {
 			throw new InvalidUrlExpiryUnit("Invalid UNIT for expiry");
 		}
 		
-		if (valueOptional.isEmpty()) {
+		if (!valueOptional.isPresent()) {
 			throw new InvalidUrlExpiryValue("Invalid VALUE for expiry");
 		}
 		

@@ -1,9 +1,8 @@
-package in.turls.lib.models.url;
+package com.github.dishavarshney.trimmy.models.url;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import lombok.Data;
 
 @Data

@@ -1,4 +1,4 @@
-package in.turls.lib.exceptions;
+package com.github.dishavarshney.trimmy.exceptions;
 
 public class InvalidUrlExpiryUnit extends Exception {
 	private static final long serialVersionUID = 1L;

@@ -1,4 +1,4 @@
-package in.turls.lib.constants;
+package com.github.dishavarshney.trimmy.constants;
 
 public enum UrlStatus {
 

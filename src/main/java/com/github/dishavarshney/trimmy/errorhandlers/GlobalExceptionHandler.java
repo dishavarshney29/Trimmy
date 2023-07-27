@@ -1,5 +1,8 @@
-package in.turls.lib.errorhandlers;
+package com.github.dishavarshney.trimmy.errorhandlers;
 
+import com.github.dishavarshney.trimmy.constants.ApiRequestErrorCode;
+import com.github.dishavarshney.trimmy.constants.ApiRequestStatus;
+import com.github.dishavarshney.trimmy.models.api.ApiResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
@@ -8,10 +11,6 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import in.turls.lib.constants.ApiRequestErrorCode;
-import in.turls.lib.constants.ApiRequestStatus;
-import in.turls.lib.models.api.ApiResponse;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

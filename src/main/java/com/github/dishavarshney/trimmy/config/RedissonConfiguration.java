@@ -1,7 +1,4 @@
-package in.turls.lib.configurations;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.github.dishavarshney.trimmy.config;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,6 +14,9 @@ import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 public class RedissonConfiguration {

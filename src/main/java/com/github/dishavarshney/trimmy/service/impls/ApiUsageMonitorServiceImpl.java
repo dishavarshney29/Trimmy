@@ -1,9 +1,6 @@
-package in.turls.lib.services.impls;
+package com.github.dishavarshney.trimmy.service.impls;
 
-import java.util.concurrent.TimeUnit;
-
-import javax.servlet.http.HttpServletRequest;
-
+import com.github.dishavarshney.trimmy.service.interfaces.ApiUsageMonitorService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.redisson.api.RMapCache;
@@ -11,7 +8,8 @@ import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import in.turls.lib.services.interfaces.ApiUsageMonitorService;
+import javax.servlet.http.HttpServletRequest;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class ApiUsageMonitorServiceImpl implements ApiUsageMonitorService {

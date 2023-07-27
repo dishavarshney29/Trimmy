@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class AppConfig implements WebMvcConfigurer {
 
     public static final String BASE_PACKAGE = "com.github.dishavarshney.trimmy";
-    public static final String ENTITY_PACKAGE = "com.github.dishavarshney.trimmy.entity";
+    public static final String ENTITY_PACKAGE = "com.github.dishavarshney.trimmy.models";
     public static final String REPOSITORY_PACKAGE = "com.github.dishavarshney.trimmy.repositories";
 
     @Override

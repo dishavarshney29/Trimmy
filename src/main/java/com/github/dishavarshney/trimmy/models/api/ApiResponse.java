@@ -1,4 +1,4 @@
-package com.github.dishavarshney.trimmy.model.api;
+package com.github.dishavarshney.trimmy.models.api;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

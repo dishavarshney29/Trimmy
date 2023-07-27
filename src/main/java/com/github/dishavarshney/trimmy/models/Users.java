@@ -1,4 +1,4 @@
-package com.github.dishavarshney.trimmy.model;
+package com.github.dishavarshney.trimmy.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.dishavarshney.trimmy.utils.Utils;
@@ -24,7 +24,6 @@ import java.util.stream.Collectors;
 
 @Document(collection = "users")
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Users implements UserDetails, PrePersistListener, PreUpdateListener{
@@ -38,8 +37,6 @@ public class Users implements UserDetails, PrePersistListener, PreUpdateListener
     private String password;
 
     private String token;
-
-    private String active;
 
     private String createdBy;
 
@@ -92,7 +89,6 @@ public class Users implements UserDetails, PrePersistListener, PreUpdateListener
 
     @Override
     public void onPrePersist() {
-        active = "Y";
         createdBy = Utils.getUserPrincipal();
         createdAt = Timestamp.from(Instant.now());
     }

@@ -1,4 +1,4 @@
-package in.turls.lib.exceptions;
+package com.github.dishavarshney.trimmy.exceptions;
 
 public class InvalidUrlExpiryValue extends Exception {
 

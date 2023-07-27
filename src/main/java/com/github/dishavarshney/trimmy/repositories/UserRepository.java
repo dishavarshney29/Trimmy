@@ -5,14 +5,13 @@
  */
 package com.github.dishavarshney.trimmy.repositories;
 
-import com.github.dishavarshney.trimmy.entity.Users;
+import com.github.dishavarshney.trimmy.models.Users;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 /**
- *
  * @author Disha Varshney
  */
 @Repository

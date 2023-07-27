@@ -1,4 +1,4 @@
-package com.github.dishavarshney.trimmy.documents;
+package com.github.dishavarshney.trimmy.models;
 
 
 import lombok.Getter;

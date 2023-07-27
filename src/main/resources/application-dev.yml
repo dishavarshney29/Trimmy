@@ -2,10 +2,10 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/trimmydb?readPreference=primary
-#short_url:
-#  domain: localhost:8081/
+short_url:
+  domain: localhost:8081/
 counter_file:
-  location: file:${HOME}/./counter.txt
+  location: "${counter.file.location}"
 redisson:
   address: redis://127.0.0.1:6379
   password:

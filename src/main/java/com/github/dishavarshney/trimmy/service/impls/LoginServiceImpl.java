@@ -5,7 +5,7 @@
  */
 package com.github.dishavarshney.trimmy.service.impls;
 
-import com.github.dishavarshney.trimmy.model.Users;
+import com.github.dishavarshney.trimmy.models.Users;
 import com.github.dishavarshney.trimmy.repositories.UserRepository;
 import java.util.Optional;
 import java.util.UUID;
@@ -21,7 +21,7 @@ import org.springframework.util.ObjectUtils;
  * @author Disha Varshney
  */
 @Service
-public class LoginService implements UserDetailsService {
+public class LoginServiceImpl implements UserDetailsService {
 
     @Autowired
     UserRepository userRepository;
@@ -68,12 +68,12 @@ public class LoginService implements UserDetailsService {
         return null;
     }
 
-    public Users getUser(String username) throws UsernameNotFoundException {
-        Optional<Users> findByUsername = userRepository.findByUsername(username.toLowerCase());
-        if (findByUsername.isPresent()) {
-            return findByUsername.get();
-        }
-        return null;
-    }
+//    public Users getUser(String username) throws UsernameNotFoundException {
+//        Optional<Users> findByUsername = userRepository.findByUsername(username.toLowerCase());
+//        if (findByUsername.isPresent()) {
+//            return findByUsername.get();
+//        }
+//        return null;
+//    }
 
 }

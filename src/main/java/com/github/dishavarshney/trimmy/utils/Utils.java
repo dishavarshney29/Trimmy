@@ -5,7 +5,7 @@
  */
 package com.github.dishavarshney.trimmy.utils;
 
-import com.github.dishavarshney.trimmy.entity.Users;
+import com.github.dishavarshney.trimmy.models.Users;
 
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.security.core.context.SecurityContextHolder;

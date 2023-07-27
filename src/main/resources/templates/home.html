@@ -59,7 +59,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>URL</th>
+                            <th>Original URL</th>
                             <th>Short URL</th>
                             <th>Created At</th>
                             <th>Action</th>
@@ -71,15 +71,15 @@
                         </tr>
                         <tr th:each="url : ${urlList}">
                             <td> <span th:text="${url.id}" /> </td>
-                            <td> <span th:text="${url.url}" />  </td>
-                            <td> <a th:href="@{/r/}+${url.shortenurl}" th:text="${url.shortenurl}" target="_blank" /> </td>
+                            <td> <span th:text="${url.originalUrl}" />  </td>
+                            <td> <a th:href="@{/r/}+${url.shortUrlKey}" th:text="${url.shortUrlKey}" target="_blank" /> </td>
                             <td> <span th:text="${url.createdAt}" />  </td>
                             <td >
                                 <form th:action="@{/app/home/url/delete/}+${url.id}" th:method="delete">
                                     <input type="hidden" name="_method" value="delete" />
                                     <input type="submit" value="Delete" class="btn btn-danger" />
                                 </form>
-                            </td> 
+                            </td>
                         </tr>
                     </tbody>
                 </table>

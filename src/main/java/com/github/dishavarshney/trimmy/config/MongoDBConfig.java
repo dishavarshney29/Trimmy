@@ -1,7 +1,7 @@
 package com.github.dishavarshney.trimmy.config;
 
-import com.github.dishavarshney.trimmy.entity.PrePersistListener;
-import com.github.dishavarshney.trimmy.entity.PreUpdateListener;
+import com.github.dishavarshney.trimmy.models.PrePersistListener;
+import com.github.dishavarshney.trimmy.models.PreUpdateListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;

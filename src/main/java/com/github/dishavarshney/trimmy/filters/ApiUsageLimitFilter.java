@@ -1,29 +1,22 @@
-package in.turls.lib.filters;
+package com.github.dishavarshney.trimmy.filters;
 
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.dishavarshney.trimmy.constants.ApiRequestErrorCode;
+import com.github.dishavarshney.trimmy.constants.ApiRequestStatus;
+import com.github.dishavarshney.trimmy.models.api.ApiResponse;
+import com.github.dishavarshney.trimmy.service.interfaces.ApiUsageMonitorService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import in.turls.lib.constants.ApiRequestErrorCode;
-import in.turls.lib.constants.ApiRequestStatus;
-import in.turls.lib.models.api.ApiResponse;
-import in.turls.lib.services.interfaces.ApiUsageMonitorService;
+import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class ApiUsageLimitFilter implements Filter {
 

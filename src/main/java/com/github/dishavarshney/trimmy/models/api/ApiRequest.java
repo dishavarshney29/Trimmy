@@ -1,10 +1,10 @@
-package com.github.dishavarshney.trimmy.model.api;
+package com.github.dishavarshney.trimmy.models.api;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import in.turls.lib.models.url.UrlExpiry;
+import com.github.dishavarshney.trimmy.models.url.UrlExpiry;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -22,7 +22,12 @@ public class ApiRequest {
 	@JsonProperty("url")
 	@NotNull
 	@Length(min = 8, max = 200)
-	private String longUrl;	
+	private String longUrl;
+
+	@JsonProperty("customShortUrl")
+	@NotNull
+	@Length(max = 7)
+	private String customShortUrl;
 	
 	@JsonProperty("expiry")
 	private UrlExpiry urlExpiry;

@@ -5,7 +5,7 @@
  */
 package com.github.dishavarshney.trimmy.config;
 
-import com.github.dishavarshney.trimmy.entity.Users;
+import com.github.dishavarshney.trimmy.models.Users;
 import com.github.dishavarshney.trimmy.repositories.UserRepository;
 
 import java.util.Optional;
