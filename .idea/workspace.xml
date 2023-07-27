@@ -7,6 +7,7 @@
     <list default="true" id="65fee658-a354-4000-ab63-22ed1f62a7c5" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/counter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/counter.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/APIKeyAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/config/APIKeyAuthFilter.java" afterDir="false" />
@@ -19,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/CounterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/CounterServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/LoginServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/dishavarshney/trimmy/service/impls/URLManagerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/github/dishavarshney/Trimmy/TrimmyApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/github/dishavarshney/Trimmy/config/APIKeyAuthFilterTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/github/dishavarshney/Trimmy/config/AppConfigTest.java" beforeDir="false" />

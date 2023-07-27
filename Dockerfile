@@ -20,11 +20,17 @@ RUN apt-get update && apt-get install -y gnupg wget
 RUN wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | apt-key add -
 RUN echo "deb http://repo.mongodb.org/apt/debian bullseye/mongodb-org/5.0 main" | tee /etc/apt/sources.list.d/mongodb-org-5.0.list
 RUN apt-get update && apt-get install -y mongodb-org
+RUN apt-get install -y redis-server
 
 # Expose the ports (Spring Boot application, MongoDB and Reddison)
 EXPOSE 8081
 EXPOSE 27017
 EXPOSE 6379
 
+# Copy the configuration files into the container
+COPY application.properties .
+COPY application-dev.yml .
+COPY counter.txt .
+
 # Command to run the Spring Boot application and MongoDB when the container starts
-CMD ["java", "-jar", "Trimmy.jar"]
+CMD ["java", "-jar", "Trimmy.jar", "--spring.config.location=application.properties,application-dev.yml"]
