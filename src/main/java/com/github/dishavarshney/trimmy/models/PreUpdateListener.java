@@ -1,4 +1,4 @@
-package com.github.dishavarshney.trimmy.entity;
+package com.github.dishavarshney.trimmy.model;
 
 public interface PreUpdateListener {
     void onPreUpdate();

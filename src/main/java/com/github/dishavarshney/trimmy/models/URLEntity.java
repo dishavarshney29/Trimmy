@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.dishavarshney.trimmy.entity;
+package com.github.dishavarshney.trimmy.model;
 
 import com.github.dishavarshney.trimmy.utils.Utils;
 import lombok.AllArgsConstructor;

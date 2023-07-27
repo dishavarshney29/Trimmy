@@ -1,4 +1,4 @@
-package com.github.dishavarshney.trimmy.entity;
+package com.github.dishavarshney.trimmy.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.dishavarshney.trimmy.utils.Utils;

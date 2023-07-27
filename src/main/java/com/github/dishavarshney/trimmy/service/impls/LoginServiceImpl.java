@@ -3,15 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.dishavarshney.trimmy.controller.service;
+package com.github.dishavarshney.trimmy.service.impls;
 
-import com.github.dishavarshney.trimmy.entity.Users;
+import com.github.dishavarshney.trimmy.model.Users;
 import com.github.dishavarshney.trimmy.repositories.UserRepository;
 import java.util.Optional;
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -20,7 +18,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 /**
- *
  * @author Disha Varshney
  */
 @Service

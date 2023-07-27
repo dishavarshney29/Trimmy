@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.dishavarshney.trimmy.controller.service;
+package com.github.dishavarshney.trimmy.service;
 
 import com.github.dishavarshney.trimmy.entity.URLEntity;
 import com.github.dishavarshney.trimmy.entity.Users;
